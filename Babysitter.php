@@ -8,7 +8,7 @@ class Babysitter {
 	}
 	
 	public function calcCharge($startTime, $endTime, $bedTime){
-		return 0;
+		return 12 * ($bedTime - $startTime);
 	}
 }
 
