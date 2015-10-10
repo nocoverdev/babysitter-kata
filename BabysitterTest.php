@@ -38,5 +38,9 @@ class BabysitterTest extends PHPUnit_Framework_TestCase{
 		$this->assertEquals(0, $this->charge->calcCharge(4, 1, 6));
 	}
 	
+	public function testErrorCheckNoChargeWithSameStartEndTimeIgnoreBedtime(){
+		$this->assertEquals(0, $this->charge->calcCharge(5, 5, 6));
+	}
+	
 }
 ?>
