@@ -33,6 +33,10 @@ class BabysitterTest extends PHPUnit_Framework_TestCase{
 	public function testCheckChargeWithEndAfterMidnight(){
 		$this->assertEquals(76, $this->charge->calcCharge(5, 1, 6));
 	}
+
+	public function testReturnZeroWithStartTimeEarlier5(){
+		$this->assertEquals(0, $this->charge->calcCharge(4, 1, 6));
+	}
 	
 }
 ?>
