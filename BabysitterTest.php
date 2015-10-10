@@ -25,6 +25,10 @@ class BabysitterTest extends PHPUnit_Framework_TestCase{
 	public function testCheckChargeWithOneHourWorkAndBedtime(){
 		$this->assertEquals(12, $this->charge->calcCharge(5, 6, 6));
 	}
+
+	public function testCheckChargeWithTwoHoursWorkAndBedtimeBetween(){
+		$this->assertEquals(20, $this->charge->calcCharge(5, 7, 6));
+	}
 	
 }
 ?>
